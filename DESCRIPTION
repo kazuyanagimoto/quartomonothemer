@@ -1,13 +1,15 @@
 Package: quartomonothemer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Monotone Theme Maker for Quarto
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Kazuharu Yanagimoto
+Maintainer: Kazuharu Yanagimoto <kazuharu.yanagimoto@gmail.com>
+Description: Makes a monotone theme for Quarto revealjs slides and ggplot.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/kazuyanagimoto/quartomonothemer
 BugReports: https://github.com/kazuyanagimoto/quartomonothemer/issues
+Imports: 
+    ggplot2
+RoxygenNote: 7.2.3
