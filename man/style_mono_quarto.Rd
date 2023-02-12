@@ -19,7 +19,6 @@ style_mono_quarto(
   color_bg = "#ffffff",
   color_code = "#0086AB",
   color_code_block_border = "#93a1a1",
-  ls_css_extra = list(),
   path_scss = "custom.scss",
   size_base = 20
 )
@@ -50,8 +49,6 @@ style_mono_quarto(
 \item{color_code}{Code color}
 
 \item{color_code_block_border}{Color of Code block border}
-
-\item{ls_css_extra}{Extra CSS written in a list}
 
 \item{path_scss}{Path of scss (Default: custom.scss)}
 

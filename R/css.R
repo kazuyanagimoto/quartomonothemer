@@ -12,7 +12,6 @@ css_quarto  <- function(
     color_bg = NULL,
     color_code = NULL,
     color_code_block_border = NULL,
-    ls_css_extra = NULL,
     path_scss = NULL
 ) {
   css_google_fonts <- c('/*-- scss:defaults --*/')
@@ -50,30 +49,13 @@ css_quarto  <- function(
                        sprintf("$code-color: %s;", color_code)
   )
 
-  css_color_system <- c("// color system",
-                        "$white: #ffffff !default;"
-  )
-
-  css_extra <- c("\n/*-- scss:rules --*/")
-  for (name in names(ls_css_extra)) {
-    css_extra <- c(css_extra, paste(name, "{"))
-
-    for (atr in names(ls_css_extra[[name]])) {
-      css_extra <- c(css_extra, sprintf("    %s: %s;", atr, ls_css_extra[[name]][[atr]]))
-    }
-
-    css_extra <- c(css_extra, "}\n")
-  }
-
   # Export
   list_text <- c(
     css_google_fonts,
     css_fonts,
     css_colors,
     css_headings,
-    css_code_blocks,
-    css_color_system,
-    css_extra
+    css_code_blocks
   )
 
   writeLines(list_text, con = path_scss)

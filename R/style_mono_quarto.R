@@ -13,7 +13,6 @@
 #' @param color_bg Background color
 #' @param color_code Code color
 #' @param color_code_block_border Color of Code block border
-#' @param ls_css_extra Extra CSS written in a list
 #' @param path_scss Path of scss (Default: custom.scss)
 #' @param size_base Base font size for the ggplot2 theme
 #'
@@ -39,7 +38,6 @@ style_mono_quarto <- function(
     color_bg = "#ffffff",
     color_code = "#0086AB",
     color_code_block_border = "#93a1a1",
-    ls_css_extra = list(),
     path_scss = "custom.scss",
     size_base = 20
 ) {
@@ -58,7 +56,6 @@ style_mono_quarto <- function(
              color_bg = color_bg,
              color_code = color_code,
              color_code_block_border = color_code_block_border,
-             ls_css_extra = ls_css_extra,
              path_scss = path_scss)
 
   # Set font & color info in the package environment
