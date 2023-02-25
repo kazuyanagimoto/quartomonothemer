@@ -16,6 +16,7 @@ style_mono_quarto(
   size_font_h4 = "1.0em",
   color_base = "#0086AB",
   color_text = "#272822",
+  color_link = "#0086AB",
   color_bg = "#ffffff",
   color_code = "#0086AB",
   color_code_block_border = "#93a1a1",
@@ -43,6 +44,8 @@ style_mono_quarto(
 \item{color_base}{Base color}
 
 \item{color_text}{Text color}
+
+\item{color_link}{Link color}
 
 \item{color_bg}{Background color}
 

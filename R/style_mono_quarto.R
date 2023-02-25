@@ -1,5 +1,6 @@
 #' Monotone Theme Maker for Quarto
 #' Makes a monotone theme for Quarto revealjs slides and ggplot.
+#'
 #' @param font_title Title font
 #' @param font_text Text font
 #' @param font_code Code font
@@ -10,6 +11,7 @@
 #' @param size_font_h4 Font size for h4
 #' @param color_base Base color
 #' @param color_text Text color
+#' @param color_link Link color
 #' @param color_bg Background color
 #' @param color_code Code color
 #' @param color_code_block_border Color of Code block border
@@ -35,6 +37,7 @@ style_mono_quarto <- function(
     size_font_h4 = "1.0em",
     color_base = "#0086AB",
     color_text = "#272822",
+    color_link = "#0086AB",
     color_bg = "#ffffff",
     color_code = "#0086AB",
     color_code_block_border = "#93a1a1",
@@ -53,6 +56,7 @@ style_mono_quarto <- function(
              size_font_h4 = size_font_h4,
              color_base = color_base,
              color_text = color_text,
+             color_link = color_link,
              color_bg = color_bg,
              color_code = color_code,
              color_code_block_border = color_code_block_border,

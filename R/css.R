@@ -9,6 +9,7 @@ css_quarto  <- function(
     size_font_h4 = NULL,
     color_base = NULL,
     color_text = NULL,
+    color_link = NULL,
     color_bg = NULL,
     color_code = NULL,
     color_code_block_border = NULL,
@@ -32,7 +33,7 @@ css_quarto  <- function(
   css_colors <- c("// colors",
                   sprintf('$body_bg: %s !default;', color_bg),
                   sprintf('$boy-color: %s !default;', color_text),
-                  sprintf('$link-color: %s !default;', color_base)
+                  sprintf('$link-color: %s !default;', color_link)
   )
 
   css_headings <- c("// headings",
