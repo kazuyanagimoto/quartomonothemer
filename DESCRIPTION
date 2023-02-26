@@ -8,7 +8,8 @@ Description: Makes a monotone theme for Quarto revealjs slides and ggplot.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/kazuyanagimoto/quartomonothemer
+URL: https://github.com/kazuyanagimoto/quartomonothemer,
+    http://kazuyanagimoto.com/quartomonothemer/
 BugReports: https://github.com/kazuyanagimoto/quartomonothemer/issues
 Imports: 
     ggplot2

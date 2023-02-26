@@ -5,3 +5,5 @@
 .Rdata
 .httr-oauth
 .DS_Store
+docs
+custom.scss

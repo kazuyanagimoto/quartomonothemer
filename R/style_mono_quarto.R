@@ -4,7 +4,7 @@
 #' @param font_title Title font
 #' @param font_text Text font
 #' @param font_code Code font
-#' @param google_fonts Google font names. `showtext` installs them
+#' @param google_fonts Google font names. These fonts will be imported in custom.scss
 #' @param size_font_h1 Font size for h1
 #' @param size_font_h2 Font size for h2
 #' @param size_font_h3 Font size for h3

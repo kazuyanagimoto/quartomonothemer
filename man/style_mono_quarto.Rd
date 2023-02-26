@@ -31,7 +31,7 @@ style_mono_quarto(
 
 \item{font_code}{Code font}
 
-\item{google_fonts}{Google font names. `showtext` installs them}
+\item{google_fonts}{Google font names. These fonts will be imported in custom.scss}
 
 \item{size_font_h1}{Font size for h1}
 
