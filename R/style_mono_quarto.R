@@ -1,5 +1,4 @@
 #' Monotone Theme Maker for Quarto
-#' Makes a monotone theme for Quarto revealjs slides and ggplot.
 #'
 #' @param font_title Title font
 #' @param font_text Text font

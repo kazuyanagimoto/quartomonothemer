@@ -2,8 +2,7 @@
 % Please edit documentation in R/style_mono_quarto.R
 \name{style_mono_quarto}
 \alias{style_mono_quarto}
-\title{Monotone Theme Maker for Quarto
-Makes a monotone theme for Quarto revealjs slides and ggplot.}
+\title{Monotone Theme Maker for Quarto}
 \usage{
 style_mono_quarto(
   font_title = "Josefin Sans",
@@ -59,7 +58,6 @@ style_mono_quarto(
 }
 \description{
 Monotone Theme Maker for Quarto
-Makes a monotone theme for Quarto revealjs slides and ggplot.
 }
 \examples{
 style_mono_quarto(

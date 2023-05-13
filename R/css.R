@@ -32,7 +32,7 @@ css_quarto  <- function(
 
   css_colors <- c("// colors",
                   sprintf('$body_bg: %s !default;', color_bg),
-                  sprintf('$boy-color: %s !default;', color_text),
+                  sprintf('$body-color: %s !default;', color_text),
                   sprintf('$link-color: %s !default;', color_link)
   )
 

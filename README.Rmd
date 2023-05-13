@@ -1,5 +1,17 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # quartomonothemer
 
@@ -8,18 +20,16 @@
 
 <img src="man/figures/quartomonothemer.gif">
 
-This package provides a custom Quarto Revealjs theme and a ggplot2
-theme. This work is strongly influenced by
-[xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/), but
-supports only limited features.
 
-You can find more examples
-[here](https://github.com/kazuyanagimoto/quarto-slides-example)
+This package provides a custom Quarto Revealjs theme and a ggplot2 theme.
+This work is strongly influenced by [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/),
+but supports only limited features.
+
+You can find more examples [here](https://github.com/kazuyanagimoto/quarto-slides-example)
 
 ## Installation
 
-You can install the development version of quartomonothemer from
-[GitHub](https://github.com/) with:
+You can install the development version of quartomonothemer from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -36,10 +46,9 @@ format:
     theme: custom.scss
 ```
 
-Then, run `style_mono_quarto()` inside of the slide qmd file. It
-produces the `custom.scss`
+Then, run `style_mono_quarto()` inside of the slide qmd file. It produces the `custom.scss`
 
-``` r
+```{r eval=FALSE}
 library(quartomonothemer)
 library(showtext)
 
@@ -65,10 +74,9 @@ style_mono_quarto(
 )
 ```
 
-This package also provide `theme_quarto()` based on the title and text
-fonts.
+This package also provide `theme_quarto()` based on the title and text fonts.
 
-``` r
+```{r eval=FALSE}
 library(palmerpenguins)
 library(tidyverse)
 penguins |>
@@ -81,5 +89,4 @@ penguins |>
   theme(legend.position = c(0.9, 0.1))
 ```
 
-Note that it does not provide any color maps. You need to specify by
-`scale_*_manual()`
+Note that it does not provide any color maps. You need to specify by `scale_*_manual()`
