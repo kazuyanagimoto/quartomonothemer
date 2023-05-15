@@ -5,10 +5,12 @@
 \title{Monotone Theme Maker for Quarto}
 \usage{
 style_mono_quarto(
+  path_scss = NULL,
   font_title = "Josefin Sans",
   font_text = "Montserrat",
-  font_code = "Fira Mono",
-  google_fonts = c("Josefin Sans", "Montserrat", "Fira Mono"),
+  font_code = "Fira Code",
+  font_sans = "Noto Sans",
+  google_fonts = NULL,
   size_font_h1 = "1.6em",
   size_font_h2 = "1.3em",
   size_font_h3 = "1.15em",
@@ -19,16 +21,22 @@ style_mono_quarto(
   color_bg = "#ffffff",
   color_code = "#0086AB",
   color_code_block_border = "#93a1a1",
-  path_scss = "custom.scss",
-  size_base = 20
+  size_base = 20,
+  font_text_table = NULL,
+  size_font_table = "0.9em",
+  width_table = "80\%"
 )
 }
 \arguments{
+\item{path_scss}{Path of scss}
+
 \item{font_title}{Title font}
 
 \item{font_text}{Text font}
 
 \item{font_code}{Code font}
+
+\item{font_sans}{An unicode font for tables}
 
 \item{google_fonts}{Google font names. These fonts will be imported in custom.scss}
 
@@ -52,9 +60,13 @@ style_mono_quarto(
 
 \item{color_code_block_border}{Color of Code block border}
 
-\item{path_scss}{Path of scss (Default: custom.scss)}
-
 \item{size_base}{Base font size for the ggplot2 theme}
+
+\item{font_text_table}{Base font size for gt table}
+
+\item{size_font_table}{Table text font}
+
+\item{width_table}{Table width (Default: 80\%)}
 }
 \description{
 Monotone Theme Maker for Quarto

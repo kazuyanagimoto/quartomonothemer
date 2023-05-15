@@ -59,7 +59,9 @@ css_quarto  <- function(
     css_code_blocks
   )
 
-  writeLines(list_text, con = path_scss)
+  if (!is.null(path_scss)) {
+    writeLines(list_text, con = path_scss)
+  }
 
 }
 

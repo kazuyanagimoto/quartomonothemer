@@ -3,6 +3,7 @@
 #' @param font_title Title font
 #' @param font_text Text font
 #' @param font_code Code font
+#' @param font_sans An unicode font for tables
 #' @param google_fonts Google font names. These fonts will be imported in custom.scss
 #' @param size_font_h1 Font size for h1
 #' @param size_font_h2 Font size for h2
@@ -14,8 +15,11 @@
 #' @param color_bg Background color
 #' @param color_code Code color
 #' @param color_code_block_border Color of Code block border
-#' @param path_scss Path of scss (Default: custom.scss)
+#' @param path_scss Path of scss
+#' @param font_text_table Base font size for gt table
+#' @param size_font_table Table text font
 #' @param size_base Base font size for the ggplot2 theme
+#' @param width_table Table width (Default: 80\%)
 #'
 #' @export
 #'
@@ -25,11 +29,14 @@
 #'     font_text = "Roboto Condensed",
 #'     google_fonts = c("Roboto", "Roboto Condensed")
 #' )
+
 style_mono_quarto <- function(
+    path_scss = NULL,
     font_title = "Josefin Sans",
     font_text = "Montserrat",
-    font_code = "Fira Mono",
-    google_fonts = c("Josefin Sans", "Montserrat", "Fira Mono"),
+    font_code = "Fira Code",
+    font_sans = "Noto Sans",
+    google_fonts = NULL,
     size_font_h1 = "1.6em",
     size_font_h2 = "1.3em",
     size_font_h3 = "1.15em",
@@ -40,9 +47,20 @@ style_mono_quarto <- function(
     color_bg = "#ffffff",
     color_code = "#0086AB",
     color_code_block_border = "#93a1a1",
-    path_scss = "custom.scss",
-    size_base = 20
+    size_base = 20,
+    font_text_table = NULL,
+    size_font_table = "0.9em",
+    width_table = "80%"
 ) {
+
+
+  if (is.null(google_fonts)) {
+    google_fonts <- c(font_title, font_text, font_code, font_sans)
+  }
+
+  if (is.null(font_text_table)) {
+    font_text_table <- c(font_text, font_sans)
+  }
 
   # Create custom.scss
   css_quarto(font_title = font_title,
@@ -67,5 +85,8 @@ style_mono_quarto <- function(
   quartomonothemer_env$size_base <- size_base
   quartomonothemer_env$color_base <- color_base
   quartomonothemer_env$color_text <- color_text
+  quartomonothemer_env$font_text_table <- c(font_text_table, font_sans)
+  quartomonothemer_env$size_font_table <- size_font_table
+  quartomonothemer_env$width_table <- width_table
 
 }
