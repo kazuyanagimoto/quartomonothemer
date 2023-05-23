@@ -15,16 +15,18 @@ style_mono_quarto(
   size_font_h2 = "1.3em",
   size_font_h3 = "1.15em",
   size_font_h4 = "1.0em",
-  color_base = "#0086AB",
+  color_base = "#009F8C",
+  color_accent = "#B75C9D",
   color_text = "#272822",
-  color_link = "#0086AB",
+  color_link = "#B75C9D",
   color_bg = "#ffffff",
-  color_code = "#0086AB",
+  color_code = "#009F8C",
   color_code_block_border = "#93a1a1",
   size_base = 20,
   font_text_table = NULL,
   size_font_table = "0.9em",
-  width_table = "80\%"
+  width_table = "80\%",
+  add_recommended_scss = TRUE
 )
 }
 \arguments{
@@ -38,7 +40,7 @@ style_mono_quarto(
 
 \item{font_sans}{An unicode font for tables}
 
-\item{google_fonts}{Google font names. These fonts will be imported in custom.scss}
+\item{google_fonts}{Google font names. These fonts will be imported in quartomonothemer.scss}
 
 \item{size_font_h1}{Font size for h1}
 
@@ -49,6 +51,8 @@ style_mono_quarto(
 \item{size_font_h4}{Font size for h4}
 
 \item{color_base}{Base color}
+
+\item{color_accent}{Accent color}
 
 \item{color_text}{Text color}
 
@@ -67,6 +71,8 @@ style_mono_quarto(
 \item{size_font_table}{Table text font}
 
 \item{width_table}{Table width (Default: 80\%)}
+
+\item{add_recommended_scss}{Add a recommended SCSS settings (Default: TRUE)}
 }
 \description{
 Monotone Theme Maker for Quarto
