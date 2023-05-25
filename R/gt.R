@@ -10,7 +10,7 @@
 #' @return
 #' @export
 #'
-#' @examples
+
 gt_theme_quarto <- function(data,
                             table.width = NULL,
                             table.font.names = NULL,

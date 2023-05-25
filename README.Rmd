@@ -54,8 +54,11 @@ library(showtext)
 
 font_title <- "Josefin Sans"
 font_text <- "Montserrat"
-color_base <- "#0086AB"
-color_base_light <- "#97D3E3"
+font_sans <- "Noto Sans" 
+color_base <- "#009F8C"
+color_base_light <- "#95DFD6"
+color_accent <- "#B75C9D"
+color_accent_light <- "#DBA6CC"
 gray <- "#bebebe"
 darkgray <- "#6d6d6d"
 
@@ -66,15 +69,17 @@ showtext_auto()
 style_mono_quarto(
   font_title = font_title,
   font_text = font_text,
-  google_fonts = c(font_title, font_text),
+  font_sans = font_sans,
   color_base = color_base,
-  color_link = color_base,
+  color_accent = color_accent,
+  color_link = color_accent,
   color_code = color_base,
-  path_scss = "custom.scss"
+  size_base = 30,
+  path_scss = "quartomonothemer.scss"
 )
 ```
 
-This package also provide `theme_quarto()` based on the title and text fonts.
+This package also provide `theme_quarto()` based on the title and text fonts,
 
 ```{r eval=FALSE}
 library(palmerpenguins)
@@ -88,5 +93,29 @@ penguins |>
   theme_quarto() +
   theme(legend.position = c(0.9, 0.1))
 ```
+
+and `gt_theme_quarto()` as a `gt` theme!
+
+```{r eval=FALSE}
+library(gt)
+penguins |>
+  filter(!is.na(sex)) |>
+  group_by(species, sex) |>
+  summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),
+            .groups = "drop") |>
+  pivot_wider(names_from = "sex", values_from = "bill_length", names_prefix = "bill_length_") |>
+  mutate(ratio_bar = 100 * bill_length_female / bill_length_male,
+         ratio = ratio_bar / 100) |>
+  gt(rowname_col = "species") |>
+  cols_label(bill_length_female = "Female", bill_length_male = "Male",
+             ratio_bar = "Female/Male", ratio = "Pct.") |>
+  fmt_number(columns = starts_with("bill_length"), decimals = 1) |>
+  fmt_percent(ratio, decimals = 0) |>
+  gt_plt_bar_pct(ratio_bar, fill = color_base, scaled = TRUE) |>
+  gt_theme_quarto()
+```
+
+
+
 
 Note that it does not provide any color maps. You need to specify by `scale_*_manual()`
