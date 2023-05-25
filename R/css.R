@@ -8,12 +8,14 @@ css_quarto  <- function(
     size_font_h3 = NULL,
     size_font_h4 = NULL,
     color_base = NULL,
+    color_accent = NULL,
     color_text = NULL,
     color_link = NULL,
     color_bg = NULL,
     color_code = NULL,
     color_code_block_border = NULL,
-    path_scss = NULL
+    path_scss = NULL,
+    add_recommended_scss = NULL
 ) {
   css_google_fonts <- c('/*-- scss:defaults --*/')
   for (font in google_fonts) {
@@ -31,8 +33,10 @@ css_quarto  <- function(
   )
 
   css_colors <- c("// colors",
+                  sprintf('$color_base: %s !default;', color_base),
+                  sprintf('$color_accent: %s !default;', color_accent),
                   sprintf('$body_bg: %s !default;', color_bg),
-                  sprintf('$boy-color: %s !default;', color_text),
+                  sprintf('$body-color: %s !default;', color_text),
                   sprintf('$link-color: %s !default;', color_link)
   )
 
@@ -50,6 +54,8 @@ css_quarto  <- function(
                        sprintf("$code-color: %s;", color_code)
   )
 
+  css_recomended <- readLines(system.file("recommended.scss", package = "quartomonothemer"))
+
   # Export
   list_text <- c(
     css_google_fonts,
@@ -59,7 +65,14 @@ css_quarto  <- function(
     css_code_blocks
   )
 
-  writeLines(list_text, con = path_scss)
+  if (add_recommended_scss) {
+   list_text <- c(list_text, css_recomended)
+  }
+
+  if (!is.null(path_scss)) {
+    writeLines(list_text, con = path_scss)
+  }
+
 
 }
 

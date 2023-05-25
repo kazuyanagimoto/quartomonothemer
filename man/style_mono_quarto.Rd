@@ -2,36 +2,45 @@
 % Please edit documentation in R/style_mono_quarto.R
 \name{style_mono_quarto}
 \alias{style_mono_quarto}
-\title{Monotone Theme Maker for Quarto
-Makes a monotone theme for Quarto revealjs slides and ggplot.}
+\title{Monotone Theme Maker for Quarto}
 \usage{
 style_mono_quarto(
+  path_scss = NULL,
   font_title = "Josefin Sans",
   font_text = "Montserrat",
-  font_code = "Fira Mono",
-  google_fonts = c("Josefin Sans", "Montserrat", "Fira Mono"),
+  font_code = "Fira Code",
+  font_sans = "Noto Sans",
+  google_fonts = NULL,
   size_font_h1 = "1.6em",
   size_font_h2 = "1.3em",
   size_font_h3 = "1.15em",
   size_font_h4 = "1.0em",
-  color_base = "#0086AB",
+  color_base = "#009F8C",
+  color_accent = "#B75C9D",
   color_text = "#272822",
-  color_link = "#0086AB",
+  color_link = "#B75C9D",
   color_bg = "#ffffff",
-  color_code = "#0086AB",
+  color_code = "#009F8C",
   color_code_block_border = "#93a1a1",
-  path_scss = "custom.scss",
-  size_base = 20
+  size_base = 20,
+  font_text_table = NULL,
+  size_font_table = "0.9em",
+  width_table = "80\%",
+  add_recommended_scss = TRUE
 )
 }
 \arguments{
+\item{path_scss}{Path of scss}
+
 \item{font_title}{Title font}
 
 \item{font_text}{Text font}
 
 \item{font_code}{Code font}
 
-\item{google_fonts}{Google font names. These fonts will be imported in custom.scss}
+\item{font_sans}{An unicode font for tables}
+
+\item{google_fonts}{Google font names. These fonts will be imported in quartomonothemer.scss}
 
 \item{size_font_h1}{Font size for h1}
 
@@ -43,6 +52,8 @@ style_mono_quarto(
 
 \item{color_base}{Base color}
 
+\item{color_accent}{Accent color}
+
 \item{color_text}{Text color}
 
 \item{color_link}{Link color}
@@ -53,13 +64,18 @@ style_mono_quarto(
 
 \item{color_code_block_border}{Color of Code block border}
 
-\item{path_scss}{Path of scss (Default: custom.scss)}
-
 \item{size_base}{Base font size for the ggplot2 theme}
+
+\item{font_text_table}{Base font size for gt table}
+
+\item{size_font_table}{Table text font}
+
+\item{width_table}{Table width (Default: 80\%)}
+
+\item{add_recommended_scss}{Add a recommended SCSS settings (Default: TRUE)}
 }
 \description{
 Monotone Theme Maker for Quarto
-Makes a monotone theme for Quarto revealjs slides and ggplot.
 }
 \examples{
 style_mono_quarto(

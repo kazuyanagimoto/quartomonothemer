@@ -1,0 +1,61 @@
+/*-- scss:rules --*/
+
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+.reveal p {
+  font-weight: 300;
+  margin-top: 1.25em;
+}
+
+// lists
+
+// Unordered lists
+
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: mix($color_base, white, 70%);
+  }
+}
+
+.reveal ul ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($color_base, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+// Ordered lists
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: $color_base;
+  }
+}
+
+.reveal ol ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($color_base, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+
+
