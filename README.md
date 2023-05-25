@@ -8,8 +8,8 @@
 
 <img src="man/figures/quartomonothemer.gif">
 
-This package provides a custom Quarto Revealjs theme and a ggplot2
-theme. This work is strongly influenced by
+This package provides custom Quarto Revealjs, `ggplot2`, and `gt`
+themes. This work is strongly influenced by
 [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/), but
 supports only limited features.
 
@@ -37,7 +37,7 @@ format:
 ```
 
 Then, run `style_mono_quarto()` inside of the slide qmd file. It
-produces the `custom.scss`
+produces the `quartomonothemer.scss`
 
 ``` r
 library(quartomonothemer)
