@@ -1,0 +1,134 @@
+[
+  {
+    "objectID": "CITATION.html",
+    "href": "CITATION.html",
+    "title": "Citation",
+    "section": "",
+    "text": "Citation\nTo cite package ‘quartomonothemer’ in publications use:\n\n  Yanagimoto K (????). _quartomonothemer: Monotone Theme Maker for\n  Quarto_. R package version 0.2.1,\n  http://kazuyanagimoto.com/quartomonothemer/,\n  &lt;https://github.com/kazuyanagimoto/quartomonothemer&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {quartomonothemer: Monotone Theme Maker for Quarto},\n    author = {Kazuharu Yanagimoto},\n    note = {R package version 0.2.1, \nhttp://kazuyanagimoto.com/quartomonothemer/},\n    url = {https://github.com/kazuyanagimoto/quartomonothemer},\n  }",
+    "crumbs": [
+      "Citation"
+    ]
+  },
+  {
+    "objectID": "man/style_mono_quarto.html",
+    "href": "man/style_mono_quarto.html",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "Monotone Theme Maker for Quarto\n\n\n\nstyle_mono_quarto(\n  path_scss = NULL,\n  font_title = \"Josefin Sans\",\n  font_text = \"Montserrat\",\n  font_code = \"Fira Code\",\n  font_sans = \"Noto Sans\",\n  google_fonts = NULL,\n  size_font_h1 = \"1.6em\",\n  size_font_h2 = \"1.3em\",\n  size_font_h3 = \"1.15em\",\n  size_font_h4 = \"1.0em\",\n  color_base = \"#009F8C\",\n  color_accent = \"#B75C9D\",\n  color_text = \"#272822\",\n  color_link = \"#B75C9D\",\n  color_bg = \"#ffffff\",\n  color_code = \"#009F8C\",\n  color_code_block_border = \"#93a1a1\",\n  size_base = 20,\n  font_text_table = NULL,\n  size_font_table = \"0.9em\",\n  width_table = \"80%\",\n  add_recommended_scss = TRUE\n)\n\n\n\n\n\n\n\npath_scss\n\n\nPath of scss\n\n\n\n\nfont_title\n\n\nTitle font\n\n\n\n\nfont_text\n\n\nText font\n\n\n\n\nfont_code\n\n\nCode font\n\n\n\n\nfont_sans\n\n\nAn unicode font for tables\n\n\n\n\ngoogle_fonts\n\n\nGoogle font names. These fonts will be imported in quartomonothemer.scss\n\n\n\n\nsize_font_h1\n\n\nFont size for h1\n\n\n\n\nsize_font_h2\n\n\nFont size for h2\n\n\n\n\nsize_font_h3\n\n\nFont size for h3\n\n\n\n\nsize_font_h4\n\n\nFont size for h4\n\n\n\n\ncolor_base\n\n\nBase color\n\n\n\n\ncolor_accent\n\n\nAccent color\n\n\n\n\ncolor_text\n\n\nText color\n\n\n\n\ncolor_link\n\n\nLink color\n\n\n\n\ncolor_bg\n\n\nBackground color\n\n\n\n\ncolor_code\n\n\nCode color\n\n\n\n\ncolor_code_block_border\n\n\nColor of Code block border\n\n\n\n\nsize_base\n\n\nBase font size for the ggplot2 theme\n\n\n\n\nfont_text_table\n\n\nBase font size for gt table\n\n\n\n\nsize_font_table\n\n\nTable text font\n\n\n\n\nwidth_table\n\n\nTable width (Default: 80%)\n\n\n\n\nadd_recommended_scss\n\n\nAdd a recommended SCSS settings (Default: TRUE)\n\n\n\n\n\n\n\nlibrary(quartomonothemer)\n\nstyle_mono_quarto(\n    font_title = \"Roboto\",\n    font_text = \"Roboto Condensed\",\n    google_fonts = c(\"Roboto\", \"Roboto Condensed\")\n)"
+  },
+  {
+    "objectID": "man/style_mono_quarto.html#monotone-theme-maker-for-quarto",
+    "href": "man/style_mono_quarto.html#monotone-theme-maker-for-quarto",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "Monotone Theme Maker for Quarto\n\n\n\nstyle_mono_quarto(\n  path_scss = NULL,\n  font_title = \"Josefin Sans\",\n  font_text = \"Montserrat\",\n  font_code = \"Fira Code\",\n  font_sans = \"Noto Sans\",\n  google_fonts = NULL,\n  size_font_h1 = \"1.6em\",\n  size_font_h2 = \"1.3em\",\n  size_font_h3 = \"1.15em\",\n  size_font_h4 = \"1.0em\",\n  color_base = \"#009F8C\",\n  color_accent = \"#B75C9D\",\n  color_text = \"#272822\",\n  color_link = \"#B75C9D\",\n  color_bg = \"#ffffff\",\n  color_code = \"#009F8C\",\n  color_code_block_border = \"#93a1a1\",\n  size_base = 20,\n  font_text_table = NULL,\n  size_font_table = \"0.9em\",\n  width_table = \"80%\",\n  add_recommended_scss = TRUE\n)\n\n\n\n\n\n\n\npath_scss\n\n\nPath of scss\n\n\n\n\nfont_title\n\n\nTitle font\n\n\n\n\nfont_text\n\n\nText font\n\n\n\n\nfont_code\n\n\nCode font\n\n\n\n\nfont_sans\n\n\nAn unicode font for tables\n\n\n\n\ngoogle_fonts\n\n\nGoogle font names. These fonts will be imported in quartomonothemer.scss\n\n\n\n\nsize_font_h1\n\n\nFont size for h1\n\n\n\n\nsize_font_h2\n\n\nFont size for h2\n\n\n\n\nsize_font_h3\n\n\nFont size for h3\n\n\n\n\nsize_font_h4\n\n\nFont size for h4\n\n\n\n\ncolor_base\n\n\nBase color\n\n\n\n\ncolor_accent\n\n\nAccent color\n\n\n\n\ncolor_text\n\n\nText color\n\n\n\n\ncolor_link\n\n\nLink color\n\n\n\n\ncolor_bg\n\n\nBackground color\n\n\n\n\ncolor_code\n\n\nCode color\n\n\n\n\ncolor_code_block_border\n\n\nColor of Code block border\n\n\n\n\nsize_base\n\n\nBase font size for the ggplot2 theme\n\n\n\n\nfont_text_table\n\n\nBase font size for gt table\n\n\n\n\nsize_font_table\n\n\nTable text font\n\n\n\n\nwidth_table\n\n\nTable width (Default: 80%)\n\n\n\n\nadd_recommended_scss\n\n\nAdd a recommended SCSS settings (Default: TRUE)\n\n\n\n\n\n\n\nlibrary(quartomonothemer)\n\nstyle_mono_quarto(\n    font_title = \"Roboto\",\n    font_text = \"Roboto Condensed\",\n    google_fonts = c(\"Roboto\", \"Roboto Condensed\")\n)"
+  },
+  {
+    "objectID": "NEWS.html",
+    "href": "NEWS.html",
+    "title": "News",
+    "section": "",
+    "text": "Bug Fixes:\n\nRemove %||% operator and replace with ifelse and is.null() checks.\n\n\n\n\nNew Features:\n\nAdd gt_theme_quarto() function to set the Quarto theme for a {gt} table.\n\n\n\n\n\nInitial GitHub submission",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "NEWS.html#section",
+    "href": "NEWS.html#section",
+    "title": "News",
+    "section": "",
+    "text": "Bug Fixes:\n\nRemove %||% operator and replace with ifelse and is.null() checks.",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "NEWS.html#section-1",
+    "href": "NEWS.html#section-1",
+    "title": "News",
+    "section": "",
+    "text": "New Features:\n\nAdd gt_theme_quarto() function to set the Quarto theme for a {gt} table.",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "NEWS.html#section-2",
+    "href": "NEWS.html#section-2",
+    "title": "News",
+    "section": "",
+    "text": "Initial GitHub submission",
+    "crumbs": [
+      "News"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "This package provides custom Quarto Revealjs, ggplot2, and gt themes. This work is strongly influenced by xaringanthemer, but supports only limited features.\nYou can find more examples here\n\n\nYou can install the development version of quartomonothemer from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"kazuyanagimoto/quartomonothemer\")\n\n\n\nFirst, add custom.scss file to the YAML header.\nformat:\n  revealjs:\n    theme: custom.scss\nThen, run style_mono_quarto() inside of the slide qmd file. It produces the quartomonothemer.scss\n\nlibrary(quartomonothemer)\nlibrary(showtext)\n\nfont_title &lt;- \"Josefin Sans\"\nfont_text &lt;- \"Montserrat\"\nfont_sans &lt;- \"Noto Sans\" \ncolor_base &lt;- \"#009F8C\"\ncolor_base_light &lt;- \"#95DFD6\"\ncolor_accent &lt;- \"#B75C9D\"\ncolor_accent_light &lt;- \"#DBA6CC\"\ngray &lt;- \"#bebebe\"\ndarkgray &lt;- \"#6d6d6d\"\n\nfont_add_google(font_title)\nfont_add_google(font_text)\nshowtext_auto()\n\nstyle_mono_quarto(\n  font_title = font_title,\n  font_text = font_text,\n  font_sans = font_sans,\n  color_base = color_base,\n  color_accent = color_accent,\n  color_link = color_accent,\n  color_code = color_base,\n  size_base = 30,\n  path_scss = \"quartomonothemer.scss\"\n)\n\nThis package also provide theme_quarto() based on the title and text fonts,\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\npenguins |&gt;\n  ggplot(aes(x = flipper_length_mm, y = bill_length_mm,\n             color = species, shape = species)) +\n  geom_point(size = 3) +\n  scale_color_manual(values = c(color_base, color_base_light, darkgray)) +\n  labs(x = \"Flipper Length (mm)\", y = \"Bill Length (mm)\") +\n  theme_quarto() +\n  theme(legend.position = c(0.9, 0.1))\n\nand gt_theme_quarto() as a gt theme!\n\nlibrary(gt)\npenguins |&gt;\n  filter(!is.na(sex)) |&gt;\n  group_by(species, sex) |&gt;\n  summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),\n            .groups = \"drop\") |&gt;\n  pivot_wider(names_from = \"sex\", values_from = \"bill_length\",\n              names_prefix = \"bill_length_\") |&gt;\n  mutate(ratio_bar = 100 * bill_length_female / bill_length_male,\n         ratio = ratio_bar / 100) |&gt;\n  gt(rowname_col = \"species\") |&gt;\n  cols_label(bill_length_female = \"Female\", bill_length_male = \"Male\",\n             ratio_bar = \"Female/Male\", ratio = \"Pct.\") |&gt;\n  fmt_number(columns = starts_with(\"bill_length\"), decimals = 1) |&gt;\n  fmt_percent(ratio, decimals = 0) |&gt;\n  gt_plt_bar_pct(ratio_bar, fill = color_base, scaled = TRUE) |&gt;\n  gt_theme_quarto()\n\nNote that it does not provide any color maps. You need to specify by scale_*_manual()",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "You can install the development version of quartomonothemer from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"kazuyanagimoto/quartomonothemer\")",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#example",
+    "href": "index.html#example",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "First, add custom.scss file to the YAML header.\nformat:\n  revealjs:\n    theme: custom.scss\nThen, run style_mono_quarto() inside of the slide qmd file. It produces the quartomonothemer.scss\n\nlibrary(quartomonothemer)\nlibrary(showtext)\n\nfont_title &lt;- \"Josefin Sans\"\nfont_text &lt;- \"Montserrat\"\nfont_sans &lt;- \"Noto Sans\" \ncolor_base &lt;- \"#009F8C\"\ncolor_base_light &lt;- \"#95DFD6\"\ncolor_accent &lt;- \"#B75C9D\"\ncolor_accent_light &lt;- \"#DBA6CC\"\ngray &lt;- \"#bebebe\"\ndarkgray &lt;- \"#6d6d6d\"\n\nfont_add_google(font_title)\nfont_add_google(font_text)\nshowtext_auto()\n\nstyle_mono_quarto(\n  font_title = font_title,\n  font_text = font_text,\n  font_sans = font_sans,\n  color_base = color_base,\n  color_accent = color_accent,\n  color_link = color_accent,\n  color_code = color_base,\n  size_base = 30,\n  path_scss = \"quartomonothemer.scss\"\n)\n\nThis package also provide theme_quarto() based on the title and text fonts,\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\npenguins |&gt;\n  ggplot(aes(x = flipper_length_mm, y = bill_length_mm,\n             color = species, shape = species)) +\n  geom_point(size = 3) +\n  scale_color_manual(values = c(color_base, color_base_light, darkgray)) +\n  labs(x = \"Flipper Length (mm)\", y = \"Bill Length (mm)\") +\n  theme_quarto() +\n  theme(legend.position = c(0.9, 0.1))\n\nand gt_theme_quarto() as a gt theme!\n\nlibrary(gt)\npenguins |&gt;\n  filter(!is.na(sex)) |&gt;\n  group_by(species, sex) |&gt;\n  summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),\n            .groups = \"drop\") |&gt;\n  pivot_wider(names_from = \"sex\", values_from = \"bill_length\",\n              names_prefix = \"bill_length_\") |&gt;\n  mutate(ratio_bar = 100 * bill_length_female / bill_length_male,\n         ratio = ratio_bar / 100) |&gt;\n  gt(rowname_col = \"species\") |&gt;\n  cols_label(bill_length_female = \"Female\", bill_length_male = \"Male\",\n             ratio_bar = \"Female/Male\", ratio = \"Pct.\") |&gt;\n  fmt_number(columns = starts_with(\"bill_length\"), decimals = 1) |&gt;\n  fmt_percent(ratio, decimals = 0) |&gt;\n  gt_plt_bar_pct(ratio_bar, fill = color_base, scaled = TRUE) |&gt;\n  gt_theme_quarto()\n\nNote that it does not provide any color maps. You need to specify by scale_*_manual()",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "MIT License",
+    "section": "",
+    "text": "MIT License\nCopyright (c) 2023 quartomonothemer authors\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "crumbs": [
+      "License"
+    ]
+  },
+  {
+    "objectID": "man/theme_quarto.html",
+    "href": "man/theme_quarto.html",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "A ggplot2 Theme Generated by quartomonothemer\n\n\n\ntheme_quarto(font_title = NULL, font_text = NULL, size_base = NULL)\n\n\n\n\n\n\n\nfont_title\n\n\nTitle font\n\n\n\n\nfont_text\n\n\nText font\n\n\n\n\nsize_base\n\n\nBase font size\n\n\n\n\n\n\nA ggplot2 theme"
+  },
+  {
+    "objectID": "man/theme_quarto.html#a-ggplot2-theme-generated-by-quartomonothemer",
+    "href": "man/theme_quarto.html#a-ggplot2-theme-generated-by-quartomonothemer",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "A ggplot2 Theme Generated by quartomonothemer\n\n\n\ntheme_quarto(font_title = NULL, font_text = NULL, size_base = NULL)\n\n\n\n\n\n\n\nfont_title\n\n\nTitle font\n\n\n\n\nfont_text\n\n\nText font\n\n\n\n\nsize_base\n\n\nBase font size\n\n\n\n\n\n\nA ggplot2 theme"
+  },
+  {
+    "objectID": "man/gt_theme_quarto.html",
+    "href": "man/gt_theme_quarto.html",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "A gt Theme Generated by quartomonothemer\n\n\n\ngt_theme_quarto(\n  data,\n  table.width = NULL,\n  table.font.names = NULL,\n  table.font.size = NULL,\n  ...\n)\n\n\n\n\n\n\n\ndata\n\n\nA gt object\n\n\n\n\ntable.width\n\n\nTable Width\n\n\n\n\ntable.font.names\n\n\nBase font name\n\n\n\n\ntable.font.size\n\n\nBase font size\n\n\n\n\n…\n\n\ngt::tab_options options\n\n\n\n\n\n\nA gt theme"
+  },
+  {
+    "objectID": "man/gt_theme_quarto.html#a-gt-theme-generated-by-quartomonothemer",
+    "href": "man/gt_theme_quarto.html#a-gt-theme-generated-by-quartomonothemer",
+    "title": "quartomonothemer",
+    "section": "",
+    "text": "A gt Theme Generated by quartomonothemer\n\n\n\ngt_theme_quarto(\n  data,\n  table.width = NULL,\n  table.font.names = NULL,\n  table.font.size = NULL,\n  ...\n)\n\n\n\n\n\n\n\ndata\n\n\nA gt object\n\n\n\n\ntable.width\n\n\nTable Width\n\n\n\n\ntable.font.names\n\n\nBase font name\n\n\n\n\ntable.font.size\n\n\nBase font size\n\n\n\n\n…\n\n\ngt::tab_options options\n\n\n\n\n\n\nA gt theme"
+  }
+]

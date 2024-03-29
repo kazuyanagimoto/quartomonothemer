@@ -1,8 +1,15 @@
 project:
   type: website
+  output-dir: ../docs/
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
 
 website:
   title: "$ALTDOC_PACKAGE_NAME"
+  page-navigation: true
   navbar:
     search: true
     right:
@@ -29,7 +36,10 @@ website:
       - text: Citation
         file: $ALTDOC_CITATION
 
-# format:
-#   html:
-#     theme: cosmo
-#     number-sections: false
+format:
+  html:
+    theme:
+      - flatly
+    highlight-style: nord
+    code-copy: true
+    code-overflow: scroll
