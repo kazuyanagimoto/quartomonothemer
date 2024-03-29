@@ -40,7 +40,8 @@ style_mono_quarto(
 
 \item{font_sans}{An unicode font for tables}
 
-\item{google_fonts}{Google font names. These fonts will be imported in quartomonothemer.scss}
+\item{google_fonts}{Google font names.
+These fonts will be imported in quartomonothemer.scss}
 
 \item{size_font_h1}{Font size for h1}
 
@@ -83,4 +84,5 @@ style_mono_quarto(
     font_text = "Roboto Condensed",
     google_fonts = c("Roboto", "Roboto Condensed")
 )
+
 }

@@ -10,10 +10,12 @@
 theme_quarto <- function(font_title = NULL,
                          font_text = NULL,
                          size_base = NULL) {
-
-  font_title <- font_title %||% quartomonothemer_env$font_title
-  font_text <- font_text %||%  quartomonothemer_env$font_text
-  size_base <- size_base %||% quartomonothemer_env$size_base
+  font_title <- ifelse(is.null(font_title),
+                       quartomonothemer_env$font_title, font_title)
+  font_text <- ifelse(is.null(font_text),
+                      quartomonothemer_env$font_text, font_text)
+  size_base <- ifelse(is.null(size_base),
+                      quartomonothemer_env$size_base, size_base)
 
   ggplot2::theme_minimal(base_family = font_text, base_size = size_base) +
     ggplot2::theme(

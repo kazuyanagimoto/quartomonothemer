@@ -1,9 +1,13 @@
 Package: quartomonothemer
 Type: Package
 Title: Monotone Theme Maker for Quarto
-Version: 0.2.0
-Author: Kazuharu Yanagimoto
-Maintainer: Kazuharu Yanagimoto <kazuharu.yanagimoto@gmail.com>
+Version: 0.2.1
+Authors@R: 
+    person(given = "Kazuharu",
+           family = "Yanagimoto",
+           email = "kazuharu.yanagimoto@gmail.com",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0007-1967-8304"))
 Description: Makes a monotone theme for Quarto revealjs slides, ggplot, and gt.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -14,4 +18,11 @@ BugReports: https://github.com/kazuyanagimoto/quartomonothemer/issues
 Imports: 
     ggplot2,
     gt
-RoxygenNote: 7.2.3
+Suggests:
+    knitr,
+    rmarkdown,
+    tools,
+    altdoc
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+VignetteBuilder: knitr

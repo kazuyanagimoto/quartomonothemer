@@ -4,7 +4,8 @@
 #' @param font_text Text font
 #' @param font_code Code font
 #' @param font_sans An unicode font for tables
-#' @param google_fonts Google font names. These fonts will be imported in quartomonothemer.scss
+#' @param google_fonts Google font names.
+#'   These fonts will be imported in quartomonothemer.scss
 #' @param size_font_h1 Font size for h1
 #' @param size_font_h2 Font size for h2
 #' @param size_font_h3 Font size for h3
@@ -20,10 +21,8 @@
 #' @param font_text_table Base font size for gt table
 #' @param size_font_table Table text font
 #' @param size_base Base font size for the ggplot2 theme
-#' @param width_table Table width (Default: 80\%)
+#' @param width_table Table width (Default: 80%)
 #' @param add_recommended_scss Add a recommended SCSS settings (Default: TRUE)
-#'
-#' @export
 #'
 #' @examples
 #' style_mono_quarto(
@@ -31,7 +30,9 @@
 #'     font_text = "Roboto Condensed",
 #'     google_fonts = c("Roboto", "Roboto Condensed")
 #' )
-
+#'
+#' @export
+#'
 style_mono_quarto <- function(
     path_scss = NULL,
     font_title = "Josefin Sans",

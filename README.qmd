@@ -1,7 +1,3 @@
----
-output: github_document
----
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -18,7 +14,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-<img src="man/figures/quartomonothemer.gif">
+<img src="man/figures/quartomonothemer.gif" width="100%">
 
 
 This package provides custom Quarto Revealjs, `ggplot2`, and  `gt` themes.
@@ -32,8 +28,8 @@ You can find more examples [here](https://github.com/kazuyanagimoto/quarto-slide
 You can install the development version of quartomonothemer from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("kazuyanagimoto/quartomonothemer")
+# install.packages("remotes")
+remotes::install_github("kazuyanagimoto/quartomonothemer")
 ```
 
 ## Example
@@ -103,7 +99,8 @@ penguins |>
   group_by(species, sex) |>
   summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),
             .groups = "drop") |>
-  pivot_wider(names_from = "sex", values_from = "bill_length", names_prefix = "bill_length_") |>
+  pivot_wider(names_from = "sex", values_from = "bill_length",
+              names_prefix = "bill_length_") |>
   mutate(ratio_bar = 100 * bill_length_female / bill_length_male,
          ratio = ratio_bar / 100) |>
   gt(rowname_col = "species") |>
@@ -114,8 +111,6 @@ penguins |>
   gt_plt_bar_pct(ratio_bar, fill = color_base, scaled = TRUE) |>
   gt_theme_quarto()
 ```
-
-
 
 
 Note that it does not provide any color maps. You need to specify by `scale_*_manual()`

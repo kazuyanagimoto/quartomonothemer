@@ -5,4 +5,8 @@
 ^docs$
 ^pkgdown$
 ^\.github$
-^README\.Rmd$
+^README\.qmd$
+^README\.html$
+README_files/*
+^altdoc$
+^_quarto$

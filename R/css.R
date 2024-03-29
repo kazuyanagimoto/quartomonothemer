@@ -1,21 +1,21 @@
 css_quarto  <- function(
-    font_title = NULL,
-    font_text = NULL,
-    font_code = NULL,
-    google_fonts = NULL,
-    size_font_h1 = NULL,
-    size_font_h2 = NULL,
-    size_font_h3 = NULL,
-    size_font_h4 = NULL,
-    color_base = NULL,
-    color_accent = NULL,
-    color_text = NULL,
-    color_link = NULL,
-    color_bg = NULL,
-    color_code = NULL,
-    color_code_block_border = NULL,
-    path_scss = NULL,
-    add_recommended_scss = NULL
+  font_title = NULL,
+  font_text = NULL,
+  font_code = NULL,
+  google_fonts = NULL,
+  size_font_h1 = NULL,
+  size_font_h2 = NULL,
+  size_font_h3 = NULL,
+  size_font_h4 = NULL,
+  color_base = NULL,
+  color_accent = NULL,
+  color_text = NULL,
+  color_link = NULL,
+  color_bg = NULL,
+  color_code = NULL,
+  color_code_block_border = NULL,
+  path_scss = NULL,
+  add_recommended_scss = NULL
 ) {
   css_google_fonts <- c('/*-- scss:defaults --*/')
   for (font in google_fonts) {
@@ -75,4 +75,3 @@ css_quarto  <- function(
 
 
 }
-

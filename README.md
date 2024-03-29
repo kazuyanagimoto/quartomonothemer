@@ -1,4 +1,5 @@
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # quartomonothemer
@@ -6,7 +7,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-<img src="man/figures/quartomonothemer.gif">
+<img src="man/figures/quartomonothemer.gif" width="100%">
 
 This package provides custom Quarto Revealjs, `ggplot2`, and `gt`
 themes. This work is strongly influenced by
@@ -22,8 +23,8 @@ You can install the development version of quartomonothemer from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("kazuyanagimoto/quartomonothemer")
+# install.packages("remotes")
+remotes::install_github("kazuyanagimoto/quartomonothemer")
 ```
 
 ## Example
@@ -95,7 +96,8 @@ penguins |>
   group_by(species, sex) |>
   summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),
             .groups = "drop") |>
-  pivot_wider(names_from = "sex", values_from = "bill_length", names_prefix = "bill_length_") |>
+  pivot_wider(names_from = "sex", values_from = "bill_length",
+              names_prefix = "bill_length_") |>
   mutate(ratio_bar = 100 * bill_length_female / bill_length_male,
          ratio = ratio_bar / 100) |>
   gt(rowname_col = "species") |>
