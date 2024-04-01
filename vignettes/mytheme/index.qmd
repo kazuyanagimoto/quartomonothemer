@@ -1,0 +1,311 @@
+---
+title: My Quarto Theme
+author: Kazuharu Yanagimoto
+date: 2023-05-25
+date-format: long
+title-slide-attributes:
+    data-background-image: "https://source.unsplash.com/mjeQon0Mh_Q"
+image: thumbnail.svg
+execute:
+    echo: false
+    warning: false
+    message: false
+    cache: false
+format:
+  revealjs:
+    standalone: false
+    embed-resources: false
+    width: 1600
+    height: 900
+    theme: quartomonothemer.scss
+    slide-number: true
+    fig-cap-location: top
+    fig-format: svg
+    pdf-separate-fragments: false
+    fig-align: center
+bibliography: references.bib
+links:
+  - name: Code
+    url: https://github.com/kazuyanagimoto/quartomonothemer/blob/main/vignettes/mytheme/index.qmd
+    icon: fa-brands fa-github
+  - name: PDF
+    url: https://kazuyanagimoto.com/quartomonothemer/vignettes/mytheme/mytheme.pdf
+    icon: fa-solid fa-file-pdf
+---
+
+
+# Palmer Archipelago Penguin {visibility="uncounted"}
+
+@horst_palmer_2020
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(modelsummary)
+library(fixest)
+library(gt)
+library(gtExtras)
+library(gghighlight)
+library(quartomonothemer)
+library(showtext)
+```
+
+
+```{r}
+font_title <- "Josefin Sans"
+font_text <- "Montserrat"
+font_sans <- "Noto Sans" 
+color_base <- "#009F8C"
+color_base_light <- "#95DFD6"
+color_accent <- "#B75C9D"
+color_accent_light <- "#DBA6CC"
+gray <- "#bebebe"
+darkgray <- "#6d6d6d"
+
+# font_add_google(font_title)
+# font_add_google(font_text)
+showtext_auto()
+
+style_mono_quarto(
+  font_title = font_title,
+  font_text = font_text,
+  font_sans = font_sans,
+  color_base = color_base,
+  color_accent = color_accent,
+  color_link = color_accent,
+  color_code = color_base,
+  size_base = 30,
+  path_scss = here::here("vignettes/mytheme/quartomonothemer.scss")
+)
+```
+
+## Bill Length
+
+```{r}
+library(palmerpenguins)
+```
+
+```{r}
+penguins |>
+  group_by(species) |>
+  summarize(bill_length_mm = mean(bill_length_mm, na.rm = TRUE)) |>
+  mutate(lbl = paste0(round(bill_length_mm), "mm")) |>
+  ggplot(aes(bill_length_mm, fct_reorder(species, bill_length_mm))) +
+  geom_col(fill = color_base) +
+  geom_text(aes(label = lbl),
+            hjust = 0, nudge_x = .5,
+            size = 7, fontface = "bold", family = font_text) +
+  scale_x_continuous(expand = expansion(mult = c(0, .15))) +
+  labs(x = NULL, y = NULL) +
+  theme_quarto() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank()) +
+  gghighlight(species == "Chinstrap")
+```
+
+## Flipper and Bill Length
+
+```{r}
+penguins |>
+  ggplot(aes(x = flipper_length_mm, y = bill_length_mm,
+             color = species, shape = species)) +
+  geom_point(size = 3) +
+  scale_color_manual(values = c(color_base, color_base_light, darkgray)) +
+  labs(x = "Flipper Length (mm)", y = "Bill Length (mm)") +
+  theme_quarto() +
+  theme(legend.position = c(0.9, 0.1))
+```
+
+## Bill Length by Sex
+
+<br>
+
+```{r}
+gtb <- penguins |>
+  filter(!is.na(sex)) |>
+  group_by(species, sex) |>
+  summarize(bill_length = mean(bill_length_mm, na.rm = TRUE),
+            .groups = "drop") |>
+  tidyr::pivot_wider(names_from = "sex", values_from = "bill_length",
+                     names_prefix = "bill_length_") |>
+  mutate(ratio_bar = 100 * bill_length_female / bill_length_male,
+         ratio = ratio_bar / 100) |>
+  gt(rowname_col = "species") |>
+  cols_label(bill_length_female = "Female", bill_length_male = "Male",
+             ratio_bar = "Female/Male", ratio = "Pct.") |>
+  fmt_number(columns = starts_with("bill_length"), decimals = 1) |>
+  fmt_percent(ratio, decimals = 0) |>
+  gt_plt_bar_pct(ratio_bar, fill = color_base, scaled = TRUE) |>
+  opt_table_font(font = google_font(name = font_text)) |>
+  gt_theme_quarto()
+
+gtb
+```
+
+## Bill Length by Sex {visibilty="uncounted"}
+
+<br>
+
+```{r}
+gtb |> gt_highlight_rows(rows = 2, fill = color_base_light)
+```
+
+
+# Titanic Passenger Survival {visibility="uncounted"}
+@hendricks_titanic_2015
+
+```{r}
+library(titanic)
+titanic <- as_tibble(titanic_train) |>
+  janitor::clean_names() |>
+  rename(gender = sex, is_survived = survived) |>
+  mutate(is_survived = is_survived == 1,
+         pclass = recode_factor(pclass,
+            `1` = "First",
+            `2` = "Second",
+            `3` = "Third"),
+         gender = recode_factor(gender,
+            male = "Men",
+            female = "Women"),
+         age_bin10 = cut(age, breaks = seq(0, 90, by = 10),
+            labels = c("<10", "10-19", "21-29", "30-39", "40-49", "50-59", "60-69", "70-79", ">80"), right = FALSE),
+         age_c = recode(age_bin10,
+                    `60-69` = ">60",
+                    `70-79` = ">60",
+                    `>80` = ">60"),
+         has_family = sib_sp + parch > 0
+         )
+```
+
+
+
+## Survival Rate by Gender
+
+```{r}
+titanic |>
+  group_by(pclass, gender) |>
+  summarize(rate_survived = mean(is_survived), .groups = "drop") |>
+  ggplot(aes(x = rate_survived, y = fct_rev(pclass), fill = fct_rev(gender))) +
+  geom_col(position = "dodge") +
+  scale_x_continuous(labels = scales::percent) +
+  scale_fill_manual(values = c(color_accent, color_base)) +
+  labs(x = NULL, y = NULL) +
+  theme_quarto() +
+  theme(legend.position = c(0.9, 0.1),
+        panel.grid.major.y = element_blank(),
+        plot.margin = margin(0, 30, 0, 0)) +
+  guides(fill = guide_legend(reverse = TRUE))
+```
+
+## Survival Rate by Age
+
+```{r}
+#| fig-align: center
+sum_titanic <- titanic |>
+  filter(!is.na(age_c)) |>
+  group_by(pclass, age_c) |>
+  summarize(rate_survived = mean(is_survived), .groups = "drop")
+
+sum_titanic |>
+  ggplot(aes(x = age_c, y = rate_survived, color = pclass,
+             shape = pclass, group = pclass)) +
+  geom_point(size = 4) +
+  geom_path() +
+  scale_color_manual(values = c(color_base, color_base_light, "gray")) +
+  geom_text(data = filter(sum_titanic, age_c == ">60"),
+            aes(label = pclass, x = age_c, y = rate_survived, color = pclass),
+            hjust = -0.2,
+            family = font_text,
+            size = 5) +
+  scale_y_continuous(labels = scales::label_percent()) +
+  coord_cartesian(clip = "off", expand = FALSE) +
+  labs(x = NULL, y = NULL) +
+  theme_quarto() +
+  theme(panel.grid.major.x = element_blank(),
+        legend.position = "none",
+        plot.margin = margin(30, 80, 10, 10))
+```
+
+## Survival Rate
+
+```{r}
+sum_titanic <- titanic |>
+  filter(!is.na(age_c)) |>
+  group_by(pclass, gender, age_c) |>
+  summarize(rate_survived = mean(is_survived), .groups = "drop")
+
+sum_titanic |>
+  mutate(lbl = paste0(round(100 * rate_survived), "%")) |>
+  ggplot(aes(x = age_c, y = fct_rev(pclass), fill = gender, alpha = rate_survived)) +
+  geom_tile() +
+  geom_text(aes(label = lbl), color = "black", family = font_text, alpha = 1) +
+  scale_fill_manual(values = c(color_base, color_accent)) +
+  facet_wrap(~gender) +
+  labs(x = NULL, y = NULL) +
+  theme_quarto() +
+  theme(panel.grid.major = element_blank(),
+        axis.text.x = element_text(size = 12),
+        legend.position = "none")
+```
+
+## Regression of Survival Rate
+
+<br>
+
+```{r}
+models <- list(
+    "(1)" = feols(is_survived ~ gender + has_family | pclass, data = titanic),
+    "(2)" = feols(is_survived ~ gender + has_family | pclass + age_c, data = titanic),
+    "(3)" = feols(is_survived ~ gender + has_family | pclass + age_c + embarked, data = titanic)
+)
+
+```
+
+```{r}
+cm  <-  c(
+    'genderWomen' = "Women",
+    "has_familyTRUE" = "With Family"
+)
+
+gm <- tibble(
+    raw = c("FE: pclass", "FE: age_c", "FE: embarked", "nobs"),
+    clean = c("FE: Class", "FE: Age Category", "FE: City Embarked", "Observations"),
+    fmt = c(0, 0, 0, 0)
+)
+
+gtb <- modelsummary(models,
+  output = "gt",
+  star = TRUE,
+  coef_map = cm,
+  gof_map = gm) |>
+  opt_table_font(font = google_font(name = font_text)) |>
+  gt_theme_quarto()
+  
+gtb
+```
+
+## Regression of Survival Rate
+
+<br>
+
+```{r}
+gtb |>
+  gt_highlight_rows(rows = 1, fill = color_accent_light)
+```
+
+
+## Regression of Survival Rate
+
+<br>
+
+```{r}
+gtb |>
+  gt_highlight_rows(rows = 3, fill = color_base_light)
+```
+
+
+## References {visibility="uncounted"}
+::: {#refs}
+:::

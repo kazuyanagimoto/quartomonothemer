@@ -6,10 +6,8 @@
 .httr-oauth
 .DS_Store
 docs
-custom.scss
 altdoc/freeze.rds
 _quarto/*
 !_quarto/_freeze/
 *_files/
 *.html
-_quarto/

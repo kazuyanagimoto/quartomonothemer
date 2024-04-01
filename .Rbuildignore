@@ -8,5 +8,6 @@
 ^README\.qmd$
 ^README\.html$
 README_files/*
+^vignettes$
 ^altdoc$
 ^_quarto$

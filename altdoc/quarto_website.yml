@@ -2,9 +2,8 @@ project:
   type: website
   output-dir: ../docs/
 
-# Note: freeze functionality can be set at a project level or for individual .qmd files
-# execute:
-#   freeze: false
+execute:
+  freeze: false
 
 website:
   title: "$ALTDOC_PACKAGE_NAME"
@@ -19,7 +18,8 @@ website:
     contents:
       - text: Home
         file: index.qmd
-      - section: $ALTDOC_VIGNETTE_BLOCK
+      - text: Gallery
+        file: vignettes/gallery.qmd
       - section: $ALTDOC_MAN_BLOCK
       - text: News
         file: $ALTDOC_NEWS
@@ -34,7 +34,7 @@ website:
       - text: Citation
         file: $ALTDOC_CITATION
 
-# format:
-#   html:
-#     theme: cosmo
-#     number-sections: false
+format:
+  html:
+    theme:
+      - custom.scss

@@ -1,0 +1,47 @@
+```{=html}
+<div class="list gallery">
+    <% for (const item of items) { %>
+    <div class="gallery-entry" <%= metadataAttrs(item) %>>
+        <div class="metadata">          
+            <p class="date listing-date"><%= item.date %></p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="<%- item.path %>"><%= item.title %></a></p>
+            <% if (item.categories) { %>
+            <div class="slides-categories listing-categories">
+                <% for (const category of item.categories) { %>
+                <div class="slides-category listing-category" onclick="window.quartoListingCategory('<%=category%>'); return false;">
+                    <%= category %>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+            <p class="author listing-author"><%= item.author %></p>
+            <p class="description listing-description"><%= item.description %></p>
+            <ul class="slides-links">
+                <% if (item.links) { %>
+                    <% for (const link of item.links) { %>
+                    <li class="slides-link">
+                        <% if (link.local) { %>
+                        <a href="<%- item.path.substring(0, item.path.lastIndexOf('/')) %>/<%- link.url %>">
+                        <% } else { %>
+                        <a href="<%- link.url %>">
+                        <% } %>
+                            <i class="<%- link.icon %>"></i> <%= link.name %>
+                        </a>
+                    </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+        <% if (item.image) { %>
+        <div class="thumbnail">
+            <a href="<%- item.path %>">
+                <img src="<%= item.image %>" alt="<%= item.title %>" title="<%= item.title %>" />
+            </a>
+        </div>
+        <% } %>
+    </div>
+    <% } %>
+</div>
+```

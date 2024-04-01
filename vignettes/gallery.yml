@@ -1,0 +1,12 @@
+- title: 私のQuartoテーマ
+  author: 柳本 和春
+  date: 2023-05-25
+  image: https://kazuyanagimoto.com/quarto-slides-example/code/slides/quartomonothemer/mytheme_jp/thumbnail.svg
+  path: https://kazuyanagimoto.com/quarto-slides-example/code/slides/quartomonothemer/mytheme_jp/
+  links:
+    - name: Code
+      url: https://github.com/kazuyanagimoto/quarto-slides-example/blob/main/code/slides/quartomonothemer/mytheme_jp/index.qmd
+      icon: fa-brands fa-github
+    - name: PDF
+      url: https://kazuyanagimoto.com/quarto-slides-example/code/slides/quartomonothemer/mytheme_jp/mytheme_jp.pdf
+      icon: fa-solid fa-file-pdf

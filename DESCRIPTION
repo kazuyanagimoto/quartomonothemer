@@ -22,6 +22,18 @@ Suggests:
     knitr,
     rmarkdown,
     tools,
+    here,
+    palmerpenguins,
+    titanic,
+    dplyr,
+    tidyr,
+    forcats,
+    modelsummary,
+    fixest,
+    janitor,
+    gtExtras,
+    gghighlight,
+    showtext,
     altdoc
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1

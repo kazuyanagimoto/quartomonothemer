@@ -1,0 +1,16 @@
+---
+title: "Gallery"
+listing:
+  contents:
+    - mytheme/index.qmd
+    - gallery.yml
+  template: listing.ejs
+  sort: "date desc"
+  type: grid
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+{{< fa this-is-placeholder-for-fa >}}

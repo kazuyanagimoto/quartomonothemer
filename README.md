@@ -14,8 +14,7 @@ themes. This work is strongly influenced by
 [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/), but
 supports only limited features.
 
-You can find more examples
-[here](https://github.com/kazuyanagimoto/quarto-slides-example)
+You can find more examples [here](vignettes/gallery.html)
 
 ## Installation
 
