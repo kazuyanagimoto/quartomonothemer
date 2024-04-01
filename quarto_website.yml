@@ -2,14 +2,12 @@ project:
   type: website
   output-dir: ../docs/
 
-execute:
-  freeze: auto
-  warning: false
-  message: false
+# Note: freeze functionality can be set at a project level or for individual .qmd files
+# execute:
+#   freeze: false
 
 website:
   title: "$ALTDOC_PACKAGE_NAME"
-  page-navigation: true
   navbar:
     search: true
     right:
@@ -36,10 +34,7 @@ website:
       - text: Citation
         file: $ALTDOC_CITATION
 
-format:
-  html:
-    theme:
-      - flatly
-    highlight-style: nord
-    code-copy: true
-    code-overflow: scroll
+# format:
+#   html:
+#     theme: cosmo
+#     number-sections: false
