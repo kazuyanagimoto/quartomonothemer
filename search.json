@@ -10,6 +10,83 @@
     ]
   },
   {
+    "objectID": "vignettes/mytheme/index.html#bill-length",
+    "href": "vignettes/mytheme/index.html#bill-length",
+    "title": "My Quarto Theme",
+    "section": "Bill Length",
+    "text": "Bill Length"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#flipper-and-bill-length",
+    "href": "vignettes/mytheme/index.html#flipper-and-bill-length",
+    "title": "My Quarto Theme",
+    "section": "Flipper and Bill Length",
+    "text": "Flipper and Bill Length"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#bill-length-by-sex",
+    "href": "vignettes/mytheme/index.html#bill-length-by-sex",
+    "title": "My Quarto Theme",
+    "section": "Bill Length by Sex",
+    "text": "Bill Length by Sex\n\n\n\n\n\n\n\n\n\n\n\nFemale\nMale\nFemale/Male\nPct.\n\n\n\n\nAdelie\n37.3\n40.4\n\n\n\n\n\n92%\n\n\nChinstrap\n46.6\n51.1\n\n\n\n\n\n91%\n\n\nGentoo\n45.6\n49.5\n\n\n\n\n\n92%"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#bill-length-by-sex-1",
+    "href": "vignettes/mytheme/index.html#bill-length-by-sex-1",
+    "title": "My Quarto Theme",
+    "section": "Bill Length by Sex",
+    "text": "Bill Length by Sex\n\n\n\n\n\n\n\n\n\n\n\nFemale\nMale\nFemale/Male\nPct.\n\n\n\n\nAdelie\n37.3\n40.4\n\n\n\n\n\n92%\n\n\nChinstrap\n46.6\n51.1\n\n\n\n\n\n91%\n\n\nGentoo\n45.6\n49.5\n\n\n\n\n\n92%"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#survival-rate-by-gender",
+    "href": "vignettes/mytheme/index.html#survival-rate-by-gender",
+    "title": "My Quarto Theme",
+    "section": "Survival Rate by Gender",
+    "text": "Survival Rate by Gender"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#survival-rate-by-age",
+    "href": "vignettes/mytheme/index.html#survival-rate-by-age",
+    "title": "My Quarto Theme",
+    "section": "Survival Rate by Age",
+    "text": "Survival Rate by Age"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#survival-rate",
+    "href": "vignettes/mytheme/index.html#survival-rate",
+    "title": "My Quarto Theme",
+    "section": "Survival Rate",
+    "text": "Survival Rate"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#regression-of-survival-rate",
+    "href": "vignettes/mytheme/index.html#regression-of-survival-rate",
+    "title": "My Quarto Theme",
+    "section": "Regression of Survival Rate",
+    "text": "Regression of Survival Rate\n\n\n\n\n\n\n\n\n\n\n\n(1)\n(2)\n(3)\n\n\n\n\nWomen\n0.512*\n0.490+\n0.487+\n\n\n\n(0.108)\n(0.133)\n(0.136)\n\n\nWith Family\n0.014\n-0.043\n-0.047\n\n\n\n(0.043)\n(0.039)\n(0.043)\n\n\nFE: Class\nX\nX\nX\n\n\nFE: Age Category\n\nX\nX\n\n\nFE: City Embarked\n\n\nX\n\n\nObservations\n891\n714\n714\n\n\n\n+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#regression-of-survival-rate-1",
+    "href": "vignettes/mytheme/index.html#regression-of-survival-rate-1",
+    "title": "My Quarto Theme",
+    "section": "Regression of Survival Rate",
+    "text": "Regression of Survival Rate\n\n\n\n\n\n\n\n\n\n\n\n(1)\n(2)\n(3)\n\n\n\n\nWomen\n0.512*\n0.490+\n0.487+\n\n\n\n(0.108)\n(0.133)\n(0.136)\n\n\nWith Family\n0.014\n-0.043\n-0.047\n\n\n\n(0.043)\n(0.039)\n(0.043)\n\n\nFE: Class\nX\nX\nX\n\n\nFE: Age Category\n\nX\nX\n\n\nFE: City Embarked\n\n\nX\n\n\nObservations\n891\n714\n714\n\n\n\n+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#regression-of-survival-rate-2",
+    "href": "vignettes/mytheme/index.html#regression-of-survival-rate-2",
+    "title": "My Quarto Theme",
+    "section": "Regression of Survival Rate",
+    "text": "Regression of Survival Rate\n\n\n\n\n\n\n\n\n\n\n\n(1)\n(2)\n(3)\n\n\n\n\nWomen\n0.512*\n0.490+\n0.487+\n\n\n\n(0.108)\n(0.133)\n(0.136)\n\n\nWith Family\n0.014\n-0.043\n-0.047\n\n\n\n(0.043)\n(0.039)\n(0.043)\n\n\nFE: Class\nX\nX\nX\n\n\nFE: Age Category\n\nX\nX\n\n\nFE: City Embarked\n\n\nX\n\n\nObservations\n891\n714\n714\n\n\n\n+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
+  },
+  {
+    "objectID": "vignettes/mytheme/index.html#references",
+    "href": "vignettes/mytheme/index.html#references",
+    "title": "My Quarto Theme",
+    "section": "References",
+    "text": "References\n\n\nHendricks, Paul. 2015. Titanic: Titanic Passenger Survival Data Set. https://github.com/paulhendricks/titanic.\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218."
+  },
+  {
     "objectID": "man/style_mono_quarto.html",
     "href": "man/style_mono_quarto.html",
     "title": "quartomonothemer",
@@ -153,6 +230,16 @@
     "crumbs": [
       "Reference",
       "gt_theme_quarto"
+    ]
+  },
+  {
+    "objectID": "vignettes/gallery.html",
+    "href": "vignettes/gallery.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "May 25, 2023\n        \n        \n            My Quarto Theme\n            \n            Kazuharu Yanagimoto\n            \n            \n                \n                    \n                    \n                        \n                        \n                        \n                             Code\n                        \n                    \n                    \n                    \n                        \n                        \n                        \n                             PDF\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                \n            \n        \n        \n    \n    \n    \n                  \n            May 25, 2023\n        \n        \n            私のQuartoテーマ\n            \n            柳本 和春\n            \n            \n                \n                    \n                    \n                        \n                        \n                        \n                             Code\n                        \n                    \n                    \n                    \n                        \n                        \n                        \n                             PDF\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                \n            \n        \n        \n    \n    \n\n\nNo matching items",
+    "crumbs": [
+      "Gallery"
     ]
   }
 ]
