@@ -11,3 +11,4 @@ _quarto/*
 !_quarto/_freeze/
 *_files/
 *.html
+_quarto/

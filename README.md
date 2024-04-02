@@ -5,6 +5,11 @@
 # quartomonothemer
 
 <!-- badges: start -->
+
+[![quartomonothemer status
+badge](https://kazuyanagimoto.r-universe.dev/badges/quartomonothemer.png)](https://kazuyanagimoto.r-universe.dev/quartomonothemer)
+<a href = "https://github.com/kazuyanagimoto/quartomonothemer/blob/main/LICENSE.md" target = "_blank"><img src="https://img.shields.io/badge/license-MIT-blue"></a>
+[![Docs](https://img.shields.io/badge/docs-homepage-blue.svg)](https://kazuyanagimoto.com/quartomonothemer/index.html)
 <!-- badges: end -->
 
 <img src="man/figures/quartomonothemer.gif" width="100%">
@@ -19,11 +24,10 @@ You can find more examples [here](vignettes/gallery.html)
 ## Installation
 
 You can install the development version of quartomonothemer from
-[GitHub](https://github.com/) with:
+R-universe with:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("kazuyanagimoto/quartomonothemer")
+install.packages("quartomonothemer", repos = "https://kazuyanagimoto.r-universe.dev")
 ```
 
 ## Example
