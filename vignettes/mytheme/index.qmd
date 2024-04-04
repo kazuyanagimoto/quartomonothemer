@@ -5,7 +5,6 @@ date: 2023-05-25
 date-format: long
 title-slide-attributes:
     data-background-image: "https://source.unsplash.com/mjeQon0Mh_Q"
-image: thumbnail.svg
 execute:
     echo: false
     warning: false
@@ -24,6 +23,7 @@ format:
     pdf-separate-fragments: false
     fig-align: center
 bibliography: references.bib
+url: https://kazuyanagimoto.com/quartomonothemer/vignettes/mytheme/
 links:
   - name: Code
     url: https://github.com/kazuyanagimoto/quartomonothemer/blob/main/vignettes/mytheme/index.qmd
@@ -32,7 +32,6 @@ links:
     url: https://kazuyanagimoto.com/quartomonothemer/vignettes/mytheme/mytheme.pdf
     icon: fa-solid fa-file-pdf
 ---
-
 
 # Palmer Archipelago Penguin {visibility="uncounted"}
 
