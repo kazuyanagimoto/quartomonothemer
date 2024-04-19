@@ -6,8 +6,8 @@
 
 <!-- badges: start -->
 
-[![quartomonothemer status
-badge](https://kazuyanagimoto.r-universe.dev/badges/quartomonothemer.png)](https://kazuyanagimoto.r-universe.dev/quartomonothemer)
+<a href="https://kazuyanagimoto.r-universe.dev"><img src="https://kazuyanagimoto.r-universe.dev/badges/quartomonothemer" class="img-fluid" alt="R-universe status badge"></a>
+[![R-CMD-check](https://github.com/kazuyanagimoto/quartomonothemer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kazuyanagimoto/quartomonothemer/actions/workflows/R-CMD-check.yaml)
 <a href = "https://github.com/kazuyanagimoto/quartomonothemer/blob/main/LICENSE.md" target = "_blank"><img src="https://img.shields.io/badge/license-MIT-blue"></a>
 [![Docs](https://img.shields.io/badge/docs-homepage-blue.svg)](https://kazuyanagimoto.com/quartomonothemer/index.html)
 <!-- badges: end -->
