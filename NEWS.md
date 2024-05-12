@@ -1,5 +1,11 @@
 # News
 
+## 0.2.2
+
+Bug Fixes:
+
+- Remove the dependency on `ggplot2` and `gt`.
+
 ## 0.2.1
 
 Bug Fixes:

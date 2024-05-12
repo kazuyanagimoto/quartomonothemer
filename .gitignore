@@ -12,3 +12,17 @@ _quarto/*
 *_files/
 *.html
 _quarto/
+
+# R
+renv/
+renv.lock
+.Rprofile
+
+# Docker
+Dockerfile
+docker-compose.yml
+.devcontainer/
+
+# Other
+.vscode/
+^_quarto$

@@ -23,6 +23,7 @@
 #' @param size_base Base font size for the ggplot2 theme
 #' @param width_table Table width (Default: 80%)
 #' @param add_recommended_scss Add a recommended SCSS settings (Default: TRUE)
+#' @param table_engine Table engine. Currently only supports "gt" (Default: "gt")
 #'
 #' @examples
 #' style_mono_quarto(
@@ -55,7 +56,8 @@ style_mono_quarto <- function(
     font_text_table = NULL,
     size_font_table = "0.9em",
     width_table = "80%",
-    add_recommended_scss = TRUE
+    add_recommended_scss = TRUE,
+    table_engine = "gt"
 ) {
 
 
@@ -65,6 +67,16 @@ style_mono_quarto <- function(
 
   if (is.null(font_text_table)) {
     font_text_table <- c(font_text, font_sans)
+  }
+
+  # Dependencies
+  if (table_engine == "gt") {
+    has_package <- requireNamespace("gt", quietly = TRUE)
+    if (!has_package) {
+      stop("Please install the 'gt' package.")
+    }
+  } else {
+    stop("Currently only supports 'gt' as a table engine")
   }
 
   # Create custom.scss

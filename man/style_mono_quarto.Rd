@@ -26,7 +26,8 @@ style_mono_quarto(
   font_text_table = NULL,
   size_font_table = "0.9em",
   width_table = "80\%",
-  add_recommended_scss = TRUE
+  add_recommended_scss = TRUE,
+  table_engine = "gt"
 )
 }
 \arguments{
@@ -74,6 +75,8 @@ These fonts will be imported in quartomonothemer.scss}
 \item{width_table}{Table width (Default: 80\%)}
 
 \item{add_recommended_scss}{Add a recommended SCSS settings (Default: TRUE)}
+
+\item{table_engine}{Table engine. Currently only supports "gt" (Default: "gt")}
 }
 \description{
 Monotone Theme Maker for Quarto

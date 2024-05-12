@@ -1,3 +1,5 @@
+^renv$
+^renv\.lock$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
@@ -11,3 +13,7 @@ README_files/*
 ^vignettes$
 ^altdoc$
 ^_quarto$
+^\.devcontainer$
+^\.vscode$
+^Dockerfile$
+^docker-compose\.yml$
