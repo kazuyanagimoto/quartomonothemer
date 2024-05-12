@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -250,7 +250,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   font_text_table = NULL,
   size_font_table = "0.9em",
   width_table = "80%",
-  add_recommended_scss = TRUE
+  add_recommended_scss = TRUE,
+  table_engine = "gt"
 )
 </code></pre>
 </section>
@@ -259,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table>
 <tbody><tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_path_scss">path_scss</code>
+<code id="path_scss">path_scss</code>
 </td>
 <td>
 Path of scss
@@ -267,7 +268,7 @@ Path of scss
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_font_title">font_title</code>
+<code id="font_title">font_title</code>
 </td>
 <td>
 Title font
@@ -275,7 +276,7 @@ Title font
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_font_text">font_text</code>
+<code id="font_text">font_text</code>
 </td>
 <td>
 Text font
@@ -283,7 +284,7 @@ Text font
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_font_code">font_code</code>
+<code id="font_code">font_code</code>
 </td>
 <td>
 Code font
@@ -291,7 +292,7 @@ Code font
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_font_sans">font_sans</code>
+<code id="font_sans">font_sans</code>
 </td>
 <td>
 An unicode font for tables
@@ -299,7 +300,7 @@ An unicode font for tables
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_google_fonts">google_fonts</code>
+<code id="google_fonts">google_fonts</code>
 </td>
 <td>
 Google font names. These fonts will be imported in quartomonothemer.scss
@@ -307,7 +308,7 @@ Google font names. These fonts will be imported in quartomonothemer.scss
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_font_h1">size_font_h1</code>
+<code id="size_font_h1">size_font_h1</code>
 </td>
 <td>
 Font size for h1
@@ -315,7 +316,7 @@ Font size for h1
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_font_h2">size_font_h2</code>
+<code id="size_font_h2">size_font_h2</code>
 </td>
 <td>
 Font size for h2
@@ -323,7 +324,7 @@ Font size for h2
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_font_h3">size_font_h3</code>
+<code id="size_font_h3">size_font_h3</code>
 </td>
 <td>
 Font size for h3
@@ -331,7 +332,7 @@ Font size for h3
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_font_h4">size_font_h4</code>
+<code id="size_font_h4">size_font_h4</code>
 </td>
 <td>
 Font size for h4
@@ -339,7 +340,7 @@ Font size for h4
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_base">color_base</code>
+<code id="color_base">color_base</code>
 </td>
 <td>
 Base color
@@ -347,7 +348,7 @@ Base color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_accent">color_accent</code>
+<code id="color_accent">color_accent</code>
 </td>
 <td>
 Accent color
@@ -355,7 +356,7 @@ Accent color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_text">color_text</code>
+<code id="color_text">color_text</code>
 </td>
 <td>
 Text color
@@ -363,7 +364,7 @@ Text color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_link">color_link</code>
+<code id="color_link">color_link</code>
 </td>
 <td>
 Link color
@@ -371,7 +372,7 @@ Link color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_bg">color_bg</code>
+<code id="color_bg">color_bg</code>
 </td>
 <td>
 Background color
@@ -379,7 +380,7 @@ Background color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_code">color_code</code>
+<code id="color_code">color_code</code>
 </td>
 <td>
 Code color
@@ -387,7 +388,7 @@ Code color
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_color_code_block_border">color_code_block_border</code>
+<code id="color_code_block_border">color_code_block_border</code>
 </td>
 <td>
 Color of Code block border
@@ -395,7 +396,7 @@ Color of Code block border
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_base">size_base</code>
+<code id="size_base">size_base</code>
 </td>
 <td>
 Base font size for the ggplot2 theme
@@ -403,7 +404,7 @@ Base font size for the ggplot2 theme
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_font_text_table">font_text_table</code>
+<code id="font_text_table">font_text_table</code>
 </td>
 <td>
 Base font size for gt table
@@ -411,7 +412,7 @@ Base font size for gt table
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_size_font_table">size_font_table</code>
+<code id="size_font_table">size_font_table</code>
 </td>
 <td>
 Table text font
@@ -419,7 +420,7 @@ Table text font
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_width_table">width_table</code>
+<code id="width_table">width_table</code>
 </td>
 <td>
 Table width (Default: 80%)
@@ -427,10 +428,18 @@ Table width (Default: 80%)
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="style_mono_quarto_:_add_recommended_scss">add_recommended_scss</code>
+<code id="add_recommended_scss">add_recommended_scss</code>
 </td>
 <td>
 Add a recommended SCSS settings (Default: TRUE)
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="table_engine">table_engine</code>
+</td>
+<td>
+Table engine. Currently only supports "gt" (Default: "gt")
 </td>
 </tr>
 </tbody></table>
